@@ -1,4 +1,5 @@
 DO NOT CHANGE PROJECT STRUCTURE DURING TRAIN!!!
+
 DO NOT CHANGE ANY USING FUNCTION NAME OR VARIABLE NAME DURING TRAIN!!!
 
-env: e:\environment\ai\pytorch"# Reinforcement-Learning-2048" 
+env: e:\environment\ai\pytorch

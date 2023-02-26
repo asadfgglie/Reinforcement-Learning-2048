@@ -1,0 +1,7 @@
+generation: 399
+pop_size: 500
+mutation_rate: 0.075
+mutate_prob: 0.01
+tournament_rate: 0.5
+params_generator: <function s4_genetic_params_generator at 0x0000024C3FEC93A0>
+model: <function individual at 0x0000024C4A028A60>

@@ -1,0 +1,7 @@
+generation: 200
+pop_size: 500
+mutation_rate: 0.05
+mutate_prob: 0.01
+tournament_rate: 0.2
+params_generator: <built-in function s4_params_generator>
+model: <built-in function individual>
