@@ -131,5 +131,5 @@ def strategy_train(store_dir: str, generation: int = 20, pop_size: int = 100, le
 
 if __name__ == '__main__':
     model_dir = 'model'
-    # genetic_train(model_dir, 400, 500, mutation_rate=0.075)
-    strategy_train(model_dir)
+    genetic_train(model_dir, 400, 500, mutation_rate=0.075)
+    # strategy_train(model_dir)
