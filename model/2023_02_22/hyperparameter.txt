@@ -1,0 +1,10 @@
+generation: 200
+pop_size: 500
+mutation_rate: 0.05
+mutate_prob: 0.01
+tournament_rate: 0.2
+params_generator: <function s4_genetic_params_generator at 0x0000022686D37C10>
+model: <function genetic_individual at 0x00000226F88F6310>
+
+max_fitness: 1340.704
+max_fitness_generation: 126

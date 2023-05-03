@@ -84,13 +84,14 @@ def strategy_spawn_population(pop_size: int, params_generator, model_func, seed:
         })
     return Population(pop_list, model_func)
 
-def next_generation(pop: Population, params_generator, learning_rate: float = 0.001, seed: Optional[int] = None) -> Population:
+def next_generation(pop: Population, params_generator, learning_rate: float = 0.1, seed: Optional[int] = None) -> Population:
     fitnesses = Tensor([i['fitness'] for i in pop.individuals])
+    fitnesses /= Tensor.sum(fitnesses)
 
-    params = (pop.individuals[1]['params'] - pop.individuals[0]['params']) * fitnesses[1]
-    for i in range(2, len(pop)):
-        params += (pop.individuals[i]['params'] - pop.individuals[0]['params']) * fitnesses[i]
-    new_pop_list = [{'params': pop.individuals[0]['params'] + params * learning_rate / (len(pop) - 1), 'fitness': None}]
+    params = pop.individuals[0]['params'] * fitnesses[0]
+    for i in range(1, len(pop)):
+        params += pop.individuals[i]['params'] * fitnesses[i]
+    new_pop_list = [{'params': pop.individuals[0]['params'] + (params - pop.individuals[0]['params']) * learning_rate, 'fitness': None}]
 
     n = params_generator(seed)
     for _ in range(1, len(pop)):

@@ -55,7 +55,7 @@ def evaluate_population(pop: Population) -> Population:
         """if need print something in sub process, use `print(x, flush=True)`"""
         individuals = []
 
-        def update_bar(result):
+        def update_bar(result) -> None:
             individuals.append(result)
             bar.update()
 

@@ -1,6 +1,8 @@
 import math
 from typing import Any, Optional
 
+from numpy import argmax
+
 
 class Population:
 

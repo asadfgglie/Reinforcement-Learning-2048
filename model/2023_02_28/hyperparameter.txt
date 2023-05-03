@@ -1,0 +1,5 @@
+generation: 20
+pop_size: 100
+learning_rate: 0.1
+params_generator: <function s4_strategy_params_generator at 0x0000025D4D3043A0>
+model: <function strategy_individual at 0x0000025D4D304310>
